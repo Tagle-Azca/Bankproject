@@ -4,13 +4,13 @@ BancoApp is a terminal application developed in C for managing banking operation
 
 Features
 
-    •	Account Management: Create, update, and query bank accounts.
-    •	Bank Transactions: Perform deposits, withdrawals, and transfers between accounts.
-    •	Account Status Inquiries: Check account status and get transaction details.
-    •	Card Management: Handle information for primary and secondary cards, as well as credit cards.
-    •	Ticket Generation: Issue tickets with the details of completed transactions.
-    •	Yield Calculation: Calculate financial yields based on the account balance.
-    •	Expense Control: Record and query expenses made with the cards.
+•	Account Management: Create, update, and query bank accounts.
+•	Bank Transactions: Perform deposits, withdrawals, and transfers between accounts.
+•	Account Status Inquiries: Check account status and get transaction details.
+•	Card Management: Handle information for primary and secondary cards, as well as credit cards.
+•	Ticket Generation: Issue tickets with the details of completed transactions.
+•	Yield Calculation: Calculate financial yields based on the account balance.
+•	Expense Control: Record and query expenses made with the cards.
 
 
 
@@ -47,19 +47,20 @@ BancoApp/
 └── EDC/
 ├── EDC.c
 └── EDC.h
+```
 
-    # To compile this code, use the following command:
+# To compile this code, use the following command:
 
-    gcc BancoMain.c Rendimientos/Rendimientos.c Gastos/Gastos.c Cuenta/Cuenta.c Depositos/Depositos.c Retiros/Retiros.c Consultas/Consultas.c Tickets/Tickets.c Transferencias/Transferenciacuenta.c Transferencias/TransferenciasBanco.c EDC/EDC.c -o BancoApp
+gcc BancoMain.c Rendimientos/Rendimientos.c Gastos/Gastos.c Cuenta/Cuenta.c Depositos/Depositos.c Retiros/Retiros.c Consultas/Consultas.c Tickets/Tickets.c Transferencias/Transferenciacuenta.c Transferencias/TransferenciasBanco.c EDC/EDC.c -o BancoApp
 
-    # Usage
-    To run the application, simply use the following command:
+# Usage
+To run the application, simply use the following command:
 
-    ./BancoApp
-    
-    Contributions
+./BancoApp
 
-    I will love any help so, any contributions are welcome. if you wish to contibute please open an issue or create a pull request with you changes.
+Contributions
+
+I will love any help so, any contributions are welcome. if you wish to contibute please open an issue or create a pull request with you changes.
 
     # Creator
     ## Andres GOMEZ TAGLE AZCARRAGA
