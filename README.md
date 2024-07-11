@@ -13,7 +13,6 @@ Features
     •	Expense Control: Record and query expenses made with the cards.
 
 
-    ### Project Structure
 
     
 ```markdown
@@ -50,21 +49,18 @@ BancoApp/
 ├── EDC.c
 └── EDC.h
 ```
-
-    ### To compile this code, use the following command:
+    ## To compile this code, use the following command:
 
     gcc BancoMain.c Rendimientos/Rendimientos.c Gastos/Gastos.c Cuenta/Cuenta.c Depositos/Depositos.c Retiros/Retiros.c Consultas/Consultas.c Tickets/Tickets.c Transferencias/Transferenciacuenta.c Transferencias/TransferenciasBanco.c EDC/EDC.c -o BancoApp
 
-    ### Usage
+    ## Usage
     To run the application, simply use the following command:
 
     ./BancoApp
-
-    ### Contributions
+    
+    Contributions
 
     I will love any help so, any contributions are welcome. if you wish to contibute please open an issue or create a pull request with you changes.
 
-    ### Creator
-    ### Andres GOMEZ TAGLE AZCARRAGA
-
-    ![Tagle Photo](000027.JPG)
+    ## Creator
+    ## Andres GOMEZ TAGLE AZCARRAGA
