@@ -15,39 +15,38 @@ Features
 
 
    ```
-### Project Structure
-
-BancoApp/
-├── BancoMain.c
-├── Cuenta/
-│ ├── Cuenta.c
-│ └── Cuenta.h
-├── Rendimientos/
-│ ├── Rendimientos.c
-│ └── Rendimientos.h
-├── Gastos/
-│ ├── Gastos.c
-│ └── Gastos.h
-├── Depositos/
-│ ├── Depositos.c
-│ └── Depositos.h
-├── Retiros/
-│ ├── Retiros.c
-│ └── Retiros.h
-├── Consultas/
-│ ├── Consultas.c
-│ └── Consultas.h
-├── Tickets/
-│ ├── Tickets.c
-│ └── Tickets.h
-├── Transferencias/
-│ ├── Transferenciacuenta.c
-│ ├── TransferenciasBanco.c
-│ └── Transferencias.h
-└── EDC/
-├── EDC.c
-└── EDC.h
-```
+        ### Project Structure
+        
+        BancoApp/
+        ├── BancoMain.c
+        ├── Cuenta/
+        │ ├── Cuenta.c
+        │ └── Cuenta.h
+        ├── Rendimientos/
+        │ ├── Rendimientos.c
+        │ └── Rendimientos.h
+        ├── Gastos/
+        │ ├── Gastos.c
+        │ └── Gastos.h
+        ├── Depositos/
+        │ ├── Depositos.c
+        │ └── Depositos.h
+        ├── Retiros/
+        │ ├── Retiros.c
+        │ └── Retiros.h
+        ├── Consultas/
+        │ ├── Consultas.c
+        │ └── Consultas.h
+        ├── Tickets/
+        │ ├── Tickets.c
+        │ └── Tickets.h
+        ├── Transferencias/
+        │ ├── Transferenciacuenta.c
+        │ ├── TransferenciasBanco.c
+        │ └── Transferencias.h
+        └── EDC/
+        ├── EDC.c
+        └── EDC.h
 
     # To compile this code, use the following command:
 
