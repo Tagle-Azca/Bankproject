@@ -14,7 +14,7 @@ Features
 
 
 
-   
+   ```
 ### Project Structure
 
 BancoApp/
@@ -47,6 +47,7 @@ BancoApp/
 └── EDC/
 ├── EDC.c
 └── EDC.h
+```
 
     ## To compile this code, use the following command:
 
