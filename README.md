@@ -1,4 +1,4 @@
-Description
+# Description
 
 BancoApp is a terminal application developed in C for managing banking operations. This project simulates a banking platform that allows users to perform various transactions and inquiries related to their accounts. It is designed to run in a command-line environment.
 
@@ -14,8 +14,7 @@ Features
 
 
 
-    
-```markdown
+   
 ### Project Structure
 
 BancoApp/
@@ -48,7 +47,7 @@ BancoApp/
 └── EDC/
 ├── EDC.c
 └── EDC.h
-```
+
     ## To compile this code, use the following command:
 
     gcc BancoMain.c Rendimientos/Rendimientos.c Gastos/Gastos.c Cuenta/Cuenta.c Depositos/Depositos.c Retiros/Retiros.c Consultas/Consultas.c Tickets/Tickets.c Transferencias/Transferenciacuenta.c Transferencias/TransferenciasBanco.c EDC/EDC.c -o BancoApp
