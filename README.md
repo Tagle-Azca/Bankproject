@@ -58,7 +58,7 @@ To run the application, simply use the following command:
 
 ./BancoApp
 
-##Contributions
+## Contributions
 
 I will love any help so, any contributions are welcome. if you wish to contibute please open an issue or create a pull request with you changes.
 
