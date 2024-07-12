@@ -63,4 +63,4 @@ To run the application, simply use the following command:
 I will love any help so, any contributions are welcome. if you wish to contibute please open an issue or create a pull request with you changes.
 
  # Creator
- ## Andres GOMEZ TAGLE AZCARRAGA
+ ## Andres Gomez Tagle Azcarraga
