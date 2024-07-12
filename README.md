@@ -1,7 +1,7 @@
 # Description
 
 BancoApp is a terminal application developed in C for managing banking operations. This project simulates a banking platform that allows users to perform various transactions and inquiries related to their accounts. It is designed to run in a command-line environment.
-
+```
 Features
 
 •	Account Management: Create, update, and query bank accounts.
@@ -11,43 +11,43 @@ Features
 •	Ticket Generation: Issue tickets with the details of completed transactions.
 •	Yield Calculation: Calculate financial yields based on the account balance.
 •	Expense Control: Record and query expenses made with the cards.
-
+```
 
 
    ```
-### Project Structure
-
-BancoApp/
-├── BancoMain.c
-├── Cuenta/
-│ ├── Cuenta.c
-│ └── Cuenta.h
-├── Rendimientos/
-│ ├── Rendimientos.c
-│ └── Rendimientos.h
-├── Gastos/
-│ ├── Gastos.c
-│ └── Gastos.h
-├── Depositos/
-│ ├── Depositos.c
-│ └── Depositos.h
-├── Retiros/
-│ ├── Retiros.c
-│ └── Retiros.h
-├── Consultas/
-│ ├── Consultas.c
-│ └── Consultas.h
-├── Tickets/
-│ ├── Tickets.c
-│ └── Tickets.h
-├── Transferencias/
-│ ├── Transferenciacuenta.c
-│ ├── TransferenciasBanco.c
-│ └── Transferencias.h
-└── EDC/
-├── EDC.c
-└── EDC.h
-```
+   ## Project Structure
+   
+   BancoApp/
+   ├── BancoMain.c
+   ├── Cuenta/
+   │ ├── Cuenta.c
+   │ └── Cuenta.h
+   ├── Rendimientos/
+   │ ├── Rendimientos.c
+   │ └── Rendimientos.h
+   ├── Gastos/
+   │ ├── Gastos.c
+   │ └── Gastos.h
+   ├── Depositos/
+   │ ├── Depositos.c
+   │ └── Depositos.h
+   ├── Retiros/
+   │ ├── Retiros.c
+   │ └── Retiros.h
+   ├── Consultas/
+   │ ├── Consultas.c
+   │ └── Consultas.h
+   ├── Tickets/
+   │ ├── Tickets.c
+   │ └── Tickets.h
+   ├── Transferencias/
+   │ ├── Transferenciacuenta.c
+   │ ├── TransferenciasBanco.c
+   │ └── Transferencias.h
+   └── EDC/
+   ├── EDC.c
+   └── EDC.h
+   ```
 
 ## To compile this code, use the following command:
 
