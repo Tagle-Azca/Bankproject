@@ -1,6 +1,7 @@
 # Description
 
 BancoApp is a terminal application developed in C for managing banking operations. This project simulates a banking platform that allows users to perform various transactions and inquiries related to their accounts. It is designed to run in a command-line environment.
+
 ```
 Features
 
@@ -13,47 +14,47 @@ Features
 •	Expense Control: Record and query expenses made with the cards.
 ```
 
+```
+## Project Structure
 
-   ```
-   ## Project Structure
-   
-   BancoApp/
-   ├── BancoMain.c
-   ├── Cuenta/
-   │ ├── Cuenta.c
-   │ └── Cuenta.h
-   ├── Rendimientos/
-   │ ├── Rendimientos.c
-   │ └── Rendimientos.h
-   ├── Gastos/
-   │ ├── Gastos.c
-   │ └── Gastos.h
-   ├── Depositos/
-   │ ├── Depositos.c
-   │ └── Depositos.h
-   ├── Retiros/
-   │ ├── Retiros.c
-   │ └── Retiros.h
-   ├── Consultas/
-   │ ├── Consultas.c
-   │ └── Consultas.h
-   ├── Tickets/
-   │ ├── Tickets.c
-   │ └── Tickets.h
-   ├── Transferencias/
-   │ ├── Transferenciacuenta.c
-   │ ├── TransferenciasBanco.c
-   │ └── Transferencias.h
-   └── EDC/
-   ├── EDC.c
-   └── EDC.h
-   ```
+BancoApp/
+├── BancoMain.c
+├── Account/
+│ ├── Account.c
+│ └── Account.h
+├── Retiros/
+│ ├── Retiros.c
+│ └── Retiros.h
+├── Expenses/
+│ ├── Expenses.c
+│ └── Expenses.h
+├── Deposits/
+│ ├── Deposits.c
+│ └── Deposits.h
+├── Retiros/
+│ ├── Retiros.c
+│ └── Retiros.h
+├── Consultas/
+│ ├── Consultas.c
+│ └── Consultas.h
+├── Tickets/
+│ ├── Tickets.c
+│ └── Tickets.h
+├── Transfers/
+│ ├── TransferenciaAccount.c
+│ ├── TransfersBanco.c
+│ └── Transfers.h
+└── EDC/
+├── EDC.c
+└── EDC.h
+```
 
 ## To compile this code, use the following command:
 
-gcc BancoMain.c Rendimientos/Rendimientos.c Gastos/Gastos.c Cuenta/Cuenta.c Depositos/Depositos.c Retiros/Retiros.c Consultas/Consultas.c Tickets/Tickets.c Transferencias/Transferenciacuenta.c Transferencias/TransferenciasBanco.c EDC/EDC.c -o BancoApp
+gcc BancoMain.c Retiros/Retiros.c Expenses/Expenses.c Account/Account.c Deposits/Deposits.c Retiros/Retiros.c Consultas/Consultas.c Tickets/Tickets.c Transfers/TransferenciaAccount.c Transfers/TransfersBanco.c EDC/EDC.c -o BancoApp
 
 ## Usage
+
 To run the application, simply use the following command:
 
 ./BancoApp
@@ -62,5 +63,6 @@ To run the application, simply use the following command:
 
 I will love any help so, any contributions are welcome. if you wish to contibute please open an issue or create a pull request with you changes.
 
- # Creator
- ## Andres Gomez Tagle Azcarraga
+# Creator
+
+## Andres Gomez Tagle Azcarraga

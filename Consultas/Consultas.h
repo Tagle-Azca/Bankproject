@@ -1,8 +1,8 @@
-#ifndef CUENTAAHORRO_H
-#define CUENTAAHORRO_H
+#ifndef AccountAHORRO_H
+#define AccountAHORRO_H
 
 void ConsultarAhorro();
-void ConsultarTarjetas();
+void ConsultarCards();
 void ConsultarInversiones();
 
 #endif

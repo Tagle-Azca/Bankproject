@@ -1,9 +1,9 @@
 #ifndef EDC_H
 #define EDC_H
 
-#include "../Cuenta/Cuenta.h"
+#include "../Account/Account.h"
 
 
-double EstadoCuenta(Cuenta *cuenta);
+double StatusAccount(Account *Account);
 
-#endif // RENDIMIENTOS_H
+#endif // Retiros_H

@@ -2,20 +2,20 @@
 #include <stdio.h>
 
 void ConsultarAhorro(){
-  printf("aqui van las consultas de las cuentas de ahorro\n");
-  //aqui registraremos el dinero guardadoe en las tarjetas
+  printf("aqui van las consultas de las Accounts de ahorro\n");
+  //aqui registraremos el dinero guardadoe en las Cards
 }
 
-void ConsultarTarjetas(){
-  printf("aqui van las consultas de las Tarjetas si hay mas de una\n");
+void ConsultarCards(){
+  printf("aqui van las consultas de las Cards si hay mas de una\n");
 
-  //aqui pondremos las ds tarjetas de nuestra cuenta
+  //aqui pondremos las ds Cards de nuestra Account
 }
 
 void ConsultarInversiones(){
   printf("aqui van a ir las inversiones\n");
 
-  //aqui pondre estimaciones de rendimiento de un rendimiento promedio de 3.5% y hacer los calculos dependiendo el tiempo seleccionado
+  //aqui pondre estimaciones de returns de un returns promedio de 3.5% y hacer los calculos dependiendo el tiempo seleccionado
 }
 
 
@@ -28,7 +28,7 @@ void realizarConsulta(int tipoConsulta){
     break;
 
     case 2:
-      ConsultarTarjetas();
+      ConsultarCards();
     break;
 
     case 3:

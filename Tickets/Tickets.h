@@ -7,9 +7,9 @@
 #include <string.h>
 
 //Se incluyen los archivosde funciones 
-#include "../Cuenta/Cuenta.h"
+#include "../Account/Account.h"
 
 // Funcion para imprimir el ticket
-void imprimeTicket(char tipoOperacion, Cuenta *cuenta, double monto);
+void imprimeTicket(char tipoOperacion, Account *Account, double amount);
 
 #endif
