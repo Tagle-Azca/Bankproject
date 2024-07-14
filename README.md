@@ -49,9 +49,13 @@ BancoApp/
 └── EDC.h
 ```
 
-## To compile this code, use the following command:
+## This project utilizes a Makefile for automating the compilation process. To compile the project, simply run make in your terminal. Ensure you have all necessary dependencies installed beforehand,to compile use the following command:
 
-gcc BancoMain.c Retiros/Retiros.c Expenses/Expenses.c Account/Account.c Deposits/Deposits.c Retiros/Retiros.c Consultas/Consultas.c Tickets/Tickets.c Transfers/TransferenciaAccount.c Transfers/TransfersBanco.c EDC/EDC.c -o BancoApp
+make
+
+Clean generated files:
+
+make clean
 
 ## Usage
 
