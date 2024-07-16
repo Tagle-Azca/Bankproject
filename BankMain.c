@@ -4,38 +4,33 @@
 #include "Deposits/Deposits.h"
 #include "Expenses/Expenses.h"
 #include "Returns/Returns.h"
-#include "Retiros/Retiros.h"
 #include "Tickets/Tickets.h"
 #include "Transfers/Transfers.h"
-#include "EDC/EDC.h" 
+#include "StatusAccount/StatusAccount.h"
 
-// Inclucion de librerias
+// Inclusion of libraries
 #include <stdio.h>
 #include <string.h>
-#include <time.h> // Para obtener la fecha actual
+#include <time.h> // For obtaining the current date
 
-
-// Declaración de la función RequestExternalAccount
+// Declaration of the RequestExternalAccount function
 void RequestExternalAccount();
-
-
 
 void CleanBuffer() {
   int c;
-  while ((c = getchar()) != '\n' &&
-         c != EOF) { /* descarta caracteres hasta el final de la línea */
+  while ((c = getchar()) != '\n' && c != EOF) { /* discard characters until end of line */
   }
 }
 
-// Estructuras principal del codigo
+// Main code structure
 int main() {
 
   Account account;
-  // Inicializar la Account
+  // Initialize the Account
   StartAccount(&account);
   int option;
-  double amount;           // Variable para almacenar el amount
-  char CardNumber[17]; // Variable para almacenar el número de Card
+  double amount;           // Variable to store the amount
+  char CardNumber[17]; // Variable to store the card number
   //double amount;
   int TransferType;
   int Months;
@@ -44,17 +39,17 @@ int main() {
   
 
   do {
-    printf("\n**** Sistema Bancario ****\n");
+    printf("\n**** Banking System ****\n");
     printf("1. Status of the Account\n");
-    printf("2. Deposito\n");
-    printf("3. Retiro\n");
-    printf("4. Transferencia\n");
-    printf("5. Retiros\n");
+    printf("2. Deposit\n");
+    printf("3. Withdrawal\n");
+    printf("4. Transfer\n");
+    printf("5. Returns\n");
     printf("6. Expenses\n");
-    printf("7. Salir\n");
-    printf("Ingrese una opción: \n");
+    printf("7. Exit\n");
+    printf("Enter an option: \n");
     if (scanf("%d", &option) != 1) {
-      fprintf(stderr, "Entrada inválida. Por favor, introduzca un número.\n");
+      fprintf(stderr, "Invalid input. Please enter a number.\n");
       while (getchar() != '\n')
         ;
       continue;
@@ -66,16 +61,16 @@ int main() {
       break;
 
     case 2:
-      // Deposito
-      printf("Ingrese el numero de Card (16 digitos): ");
+      // Deposit
+      printf("Enter the card number (16 digits): ");
       if (scanf("%s", CardNumber) != 1) {
-        fprintf(stderr, "Error en la entrada. Intente nuevamente.\n");
+        fprintf(stderr, "Input error. Please try again.\n");
         CleanBuffer();
         continue;
       }
-      printf("Ingrese el amount a depositar: ");
+      printf("Enter the amount to deposit: ");
       if (scanf("%lf", &amount) != 1) {
-        fprintf(stderr, "Error en la entrada. Intente nuevamente.\n");
+        fprintf(stderr, "Input error. Please try again.\n");
         CleanBuffer();
         continue;
       }
@@ -83,82 +78,66 @@ int main() {
       break;
 
     case 3:
-      // Retiro
-      printf("Ingrese el numero de Account (16 digitos): ");
-      if (scanf("%16s", CardNumber) != 1) {
-        fprintf(stderr, "Error en la entrada. Intente nuevamente.\n");
-        continue;
-      }
-      printf("Ingrese el amount a retirar: ");
-      if (scanf("%lf", &amount) != 1) {
-        fprintf(stderr, "Error en la entrada. Intente nuevamente.\n");
-        continue;
-      }
-      retiro(&account, CardNumber, amount);
-      break;
-    case 4:
       // Transfers
-      printf("Seleccione el tipo de transferencia:\n");
-      printf("1. Transferencia SPEI\n");
-      printf("2. Transferencia entre Cards\n");
-      printf("Ingrese opción: ");
+      printf("Select the type of transfer:\n");
+      printf("1. SPEI Transfer\n");
+      printf("2. Transfer between cards\n");
+      printf("Enter option: ");
       if (scanf("%d", &TransferType) != 1) {
-        fprintf(stderr, "Error en la entrada. Intente nuevamente.\n");
+        fprintf(stderr, "Input error. Please try again.\n");
         CleanBuffer();
         continue;
       }
       switch (TransferType) {
       case 1:
-        // Transferencia SPEI
-        printf("Ingrese el amount a transferir: ");
+        // SPEI Transfer
+        printf("Enter the amount to transfer: ");
         if (scanf("%lf", &amount) != 1) {
-          fprintf(stderr, "Error en la entrada. Intente nuevamente.\n");
+          fprintf(stderr, "Input error. Please try again.\n");
           CleanBuffer();
           break; 
         }
         RequestExternalAccount();
-        TransferExternalBank(&account.MainCard, AccountdestinationTicket,
-                               amount);
+        TransferExternalBank(&account.MainCard, AccountdestinationTicket, amount);
         break;
       case 2:
 
-        //Transfers between accounts
-        printf("Ingrese el amount a transferir a Card secundaria: ");
+        // Transfers between accounts
+        printf("Enter the amount to transfer to secondary card: ");
         if (scanf("%lf", &amount) != 1) {
-          fprintf(stderr, "Error en la entrada. Intente nuevamente.\n");
+          fprintf(stderr, "Input error. Please try again.\n");
           break; 
         }
-        TransfersAccount(&account.MainCard,
-                               &account.SecondaryCard, amount);
+        TransfersAccount(&account.MainCard, &account.SecondaryCard, amount);
         break;
       default:
         printf("Invalid option\n");
         break;
       }
-      break; // Este break asegura salir del caso 4 y regresar al menú principal
+      break; // This break ensures to exit case 4 and return to the main menu
 
-    case 5:
-      // Retiros
+    case 4:
+      // Returns
       Months = 12;
-      double Returns = CalculateReturns(account.MainCard.Balance, Months);
-                printf("Calculo de returns del 3.5 anual\n");
-                printf("\nbalance después de 1 mes: %.2f\n", CalculateReturns(MainCardBalance, 1));
-                printf("balance después de 6 Months: %.2f\n", CalculateReturns(MainCardBalance, 6));
-                printf("balance después de 1 año: %.2f\n", CalculateReturns(MainCardBalance, 12));
-                printf("balance después de 5 años: %.2f\n", CalculateReturns(MainCardBalance, 60));
-                printf("balance después de 10 años: %.2f\n", CalculateReturns(MainCardBalance, 120));
+      double returns = CalculateReturns(account.MainCard.Balance, Months);
+                printf("Calculation of 3.5 annual returns\n");
+                printf("\nBalance after 1 month: %.2f\n", CalculateReturns(MainCardBalance, 1));
+                printf("Balance after 6 months: %.2f\n", CalculateReturns(MainCardBalance, 6));
+                printf("Balance after 1 year: %.2f\n", CalculateReturns(MainCardBalance, 12));
+                printf("Balance after 5 years: %.2f\n", CalculateReturns(MainCardBalance, 60));
+                printf("Balance after 10 years: %.2f\n", CalculateReturns(MainCardBalance, 120));
                 break;
-    case 6:
+    case 5:
       StartExpenses();
       showReportsOfExpenses();
       break;
 
-    case 7:
-      printf("Gracias :) regrese pronto\n");
+    case 6:
+      printf("Thank you :) Come back soon\n");
       break;
 
     default:
-      printf("option no valida, intente nuevamente. \n");
+      printf("Invalid option, please try again. \n");
       break;
     }
   } while (option != 7);

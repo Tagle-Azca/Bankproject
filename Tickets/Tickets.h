@@ -10,6 +10,6 @@
 #include "../Account/Account.h"
 
 // Funcion para imprimir el ticket
-void imprimeTicket(char tipoOperacion, Account *Account, double amount);
+void PrintTicket(char OperationType, Account *Account, double amount);
 
 #endif

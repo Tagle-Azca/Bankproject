@@ -1,9 +1,9 @@
-#ifndef EDC_H
-#define EDC_H
+#ifndef StatusAccount_H
+#define StatusAccount_H
 
 #include "../Account/Account.h"
 
 
 double StatusAccount(Account *Account);
 
-#endif // Retiros_H
+#endif // withdrawals_H

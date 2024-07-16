@@ -30,11 +30,11 @@ void Depositar(Account *Account, char *CardNumber, double amount) {
 
   if (strcmp(Account->MainCard.ID, CardNumber) == 0) {
     Account->MainCard.Balance += amount;
-    imprimeTicket('D', Account, amount);
+    PrintTicket('D', Account, amount);
     printf("Deposit was succesfull on the principal Card.\n");
   } else if (strcmp(Account->SecondaryCard.ID, CardNumber) == 0) {
     Account->SecondaryCard.Balance += amount;
-    imprimeTicket('D', Account, amount);
+    PrintTicket('D', Account, amount);
     printf("Deposit was succesfull on the secondary Card.\n");
   } else {
     printf("The card number does not match any card associated with this account.\n");
