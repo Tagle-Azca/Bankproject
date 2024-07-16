@@ -28,15 +28,9 @@ void PrintTicket(char OperationType, Account *Account, double amount) {
              : (OperationType == 'R' ? "Withdrawal" : "Transfer"));
 
   printf("Account number 1: %s\n", Account->AccountID);
-  
-  // Modify for Transfer
-  /*if (OperationType == 'T') {
-    printf("Account number 2: %s\n", Account->AccountIDdestination);
-  }*/
+
   
   printf("Amount: %.2f\n", amount);
-  // printf("Balance: %.2f\n", encuentraAccount(numeroAccount1) -> balance);
-  // Print the date and time in the GMT-6 time zone (Central Standard Time)
   printf(
       "Date and time: %02d/%02d/%d %02d:%02d:%02d\n", tm->tm_mday,
       tm->tm_mon + 1, tm->tm_year + 1900, tm->tm_hour + 6, tm->tm_min,
