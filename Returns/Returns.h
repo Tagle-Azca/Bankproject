@@ -1,6 +1,6 @@
-#ifndef Retiros_H
-#define Retiros_H
+#ifndef withdrawals_H
+#define withdrawals_H
 
 double CalculateReturns(double balance, int Months);
 
-#endif // Retiros_H
+#endif // withdrawals_H

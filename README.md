@@ -22,18 +22,18 @@ BancoApp/
 ├── Account/
 │ ├── Account.c
 │ └── Account.h
-├── Retiros/
-│ ├── Retiros.c
-│ └── Retiros.h
+├── withdrawals/
+│ ├── withdrawals.c
+│ └── withdrawals.h
 ├── Expenses/
 │ ├── Expenses.c
 │ └── Expenses.h
 ├── Deposits/
 │ ├── Deposits.c
 │ └── Deposits.h
-├── Retiros/
-│ ├── Retiros.c
-│ └── Retiros.h
+├── withdrawals/
+│ ├── withdrawals.c
+│ └── withdrawals.h
 ├── Consultas/
 │ ├── Consultas.c
 │ └── Consultas.h
@@ -44,9 +44,9 @@ BancoApp/
 │ ├── TransferenciaAccount.c
 │ ├── TransfersBanco.c
 │ └── Transfers.h
-└── EDC/
-├── EDC.c
-└── EDC.h
+└── StatusAccount/
+├── StatusAccount.c
+└── StatusAccount.h
 ```
 
 ## This project utilizes a Makefile for automating the compilation process. To compile the project, simply run make in your terminal. Ensure you have all necessary dependencies installed beforehand,to compile use the following command:
