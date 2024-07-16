@@ -61,7 +61,7 @@ make clean
 
 To run the application, simply use the following command:
 
-./BancoApp
+./BankProject
 
 ## Contributions
 
