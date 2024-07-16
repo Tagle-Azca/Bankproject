@@ -7,19 +7,19 @@
 
 void TransfersAccount(Card *origin, Card *destination, double amount) {
     if (origin == NULL || destination == NULL) {
-        printf("Error: los datos de la Card no son válidos.\n");
+        printf("Error: Invalid card numbers.\n");
         return;
     }
     if (amount <= 0) {
-        printf("Error: el amount a transferir debe ser positivo.\n");
+        printf("Error: the ammount ned to be a positive number.\n");
         return;
     }
     if (origin->Balance >= amount) {
         origin->Balance -= amount;
         destination->Balance += amount;
-        printf("Transferencia exitosa de $%.2f de la Card %s a la Card %s.\n", amount, origin->ID, destination->ID);
+        printf("Succesfull tranfer of $%.2f from the card %s to the Card %s.\n", amount, origin->ID, destination->ID);
     } else {
-        printf("Balance insuficiente en la Card %s. Balance disponible: $%.2f, amount requerido: $%.2f.\n", origin->ID, origin->Balance, amount);
+        printf("Insufficient balance on the card %s. Available balance is: $%.2f,required amount: $%.2f.\n", origin->ID, origin->Balance, amount);
     }
 
 }

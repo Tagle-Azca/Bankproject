@@ -41,17 +41,16 @@ void RequestExternalAccount() {
   int Valid;
 
   do {
-    printf("Ingrese el número de Account destination (16 dígitos): \n");
+    printf("Input the destination account (16 digits): \n");
     liBuffer();
     if (!fgets(buffer, sizeof(buffer), stdin)) {
-      // Manejar posible error de lectura
       continue;
     }
-    // Eliminar el salto de línea al final del string
+
     buffer[strcspn(buffer, "\n")] = 0;
 
     if (strlen(buffer) == 0) {
-      printf("No se ingresó ningún número. Intente de nuevo.\n");
+      printf("Error: There was no number on the input. Try again\n");
       continue;
     }
 
@@ -60,13 +59,13 @@ void RequestExternalAccount() {
         ItsNumersAccount(AccountdestinationTicket)) {
       Valid = 1;
     } else {
-      printf("Número de Account inválido, debe ser de 16 números.\n");
+      printf("Invalid account number, It must be a 16 digit number.\n");
       Valid = 0;
     }
   } while (!Valid);
 
   if (InputDestinationBank() == 0) {
-    printf("Banco seleccionado correctamente\n");
+    printf("The bank was succesfully selected \n");
   }
 }
 
@@ -74,15 +73,15 @@ int InputDestinationBank() {
   char input[20];
   int ValidBank = 0;
 
-  printf("Ingresar el banco del destination\n");
+  printf("Enter the destination bank: \n");
   for (int i = 0; i < BankNumber; i++) {
     printf("- %s\n", Banks[i]);
   }
   while (!ValidBank) {
-    printf("Ingrese el Name del banco: \n");
+    printf("Enter the destination Bank name: \n");
     if (fgets(input, sizeof(input), stdin) == NULL) {
       fprintf(stderr,
-              "Error al leer el Name del banco. Intente nuevamente.\n");
+              "Error: name bank is incorrect, try again\n");
       continue;
     }
     // Eliminar el salto de línea al final del string
@@ -96,7 +95,7 @@ int InputDestinationBank() {
       }
     }
     if (!ValidBank) {
-      printf("Banco no reconocido. por favor intentar de nuevo");
+      printf("Bank is not on the list. try again\n");
     }
   }
   return ValidBank;
@@ -108,19 +107,19 @@ int DestinationName() {
   while (intentos < 3) { // Limita el número de intentos
     printf("Ingrese el Name del destinatario: ");
     if (!fgets(Name, sizeof(Name), stdin)) {
-      fprintf(stderr, "Error al leer la entrada. Intente de nuevo.\n");
+      fprintf(stderr, "Error into reading the input. try again\n");
       continue;
     }
     Name[strcspn(Name, "\n")] = 0; // Elimina el salto de línea
 
     int longitud = strlen(Name);
     if (longitud < 2 || longitud > 30) {
-      printf("El Name debe tener entre 2 y 30 caracteres.\n");
+      printf("The name must be a 2 to 30 caracters.\n");
     } else {
       int Valid = 1;
       for (int i = 0; i < longitud; i++) {
         if (!isalpha(Name[i]) && Name[i] != ' ' && Name[i] != '-') {
-          printf("El Name solo puede contener letras, espacios o guiones.\n");
+          printf("The name can only contain letters, spaces and hyphens\n");
           Valid = 0;
           break;
         }
@@ -132,16 +131,16 @@ int DestinationName() {
     }
     intentos++;
   }
-  printf("Se han superado los intentos máximos.\n");
+  printf("Maximum atemps reached.\n");
   return 0;
 }
 
 int ValidateTransfer() {
   char responses[5];
   do {
-    printf("Desea Confirmar Transferencia (si/no): ");
+    printf("Do you wish to confirm the tranfer?: (yes|no)");
     if (fgets(responses, sizeof(responses), stdin) == NULL) {
-      fprintf(stderr, "Error al leer la entrada. Intente de nuevo.\n");
+      fprintf(stderr, "Error into reading the input please try again.\n");
       continue;
     }
     responses[strcspn(responses, "\n")] =
@@ -150,12 +149,12 @@ int ValidateTransfer() {
     for (int i = 0; responses[i]; i++) {
       responses[i] = tolower((unsigned char)responses[i]);
     }
-    if (strcmp(responses, "si") == 0) {
+    if (strcmp(responses, "yes") == 0) {
       return 1;
     } else if (strcmp(responses, "no") == 0) {
       return 0;
     } else {
-      printf("responses inválida, intente nuevamente. \n");
+      printf("responses invalid,  Try again. \n");
     }
   } while (1);
 }
@@ -165,14 +164,14 @@ void TransferExternalBank(Card *origin, const char *DestinationName,
   if (ValidateTransfer()) {
     if (origin->Balance >= amount) {
       origin->Balance -= amount;
-      printf("Transferencia de %.2f a Account %s en %s realizada con éxito.\n",
+      printf("Transfer of %.2f to Account %s in %s Was successful.\n",
              amount, AccountdestinationTicket, NameBancoTicket);
       // Aquí podrías añadir un log de la transacción
     } else {
-      printf("Balance insuficiente para realizar la transferencia.\n");
+      printf("Insufucient balance to performe the transfer.\n");
     }
   } else {
-    printf("Transferencia cancelada por el usuario.\n");
+    printf("User cancel the transfer.\n");
   }
 }
 
