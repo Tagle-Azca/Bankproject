@@ -1,6 +1,6 @@
 #include "../Account/Account.h" 
 #include "../Tickets/Tickets.h"
-#include <ctype.h> // Para isspace
+#include <ctype.h> 
 #include <stdio.h>
 #include <string.h> 
 
@@ -40,3 +40,4 @@ void Depositar(Account *Account, char *CardNumber, double amount) {
     printf("The card number does not match any card associated with this account.\n");
   }
 }
+

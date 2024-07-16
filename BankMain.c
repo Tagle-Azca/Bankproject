@@ -8,12 +8,10 @@
 #include "Transfers/Transfers.h"
 #include "StatusAccount/StatusAccount.h"
 
-// Inclusion of libraries
 #include <stdio.h>
 #include <string.h>
-#include <time.h> // For obtaining the current date
+#include <time.h> 
 
-// Declaration of the RequestExternalAccount function
 void RequestExternalAccount();
 
 void CleanBuffer() {
