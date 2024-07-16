@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include "../Account/Account.h"
 
-//Structure of the ticket
+//Ticket structure
+
 void StatusAccount(Account *Account){
     printf("*******Status of the Account *******\n");
     printf("\nOwner of the Account: \n%s\n", Account->AccountN);
