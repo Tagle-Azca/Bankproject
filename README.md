@@ -53,12 +53,6 @@ BancoApp/
 
 To compile use the following command:
 
-make
-
-Clean generated files:
-
-make clean
-
 ## Usage
 
 To run the application, simply use the following command:
