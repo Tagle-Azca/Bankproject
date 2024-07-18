@@ -49,7 +49,9 @@ BancoApp/
 └── StatusAccount.h
 ```
 
-## This project utilizes a Makefile for automating the compilation process. To compile the project, simply run make in your terminal. Ensure you have all necessary dependencies installed beforehand,to compile use the following command:
+## This project utilizes a Makefile for automating the compilation process. To compile the project, simply run make in your terminal. Ensure you have all necessary dependencies installed beforehand.
+
+To compile use the following command:
 
 make
 
