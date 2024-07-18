@@ -51,15 +51,7 @@ BancoApp/
 
 ## This project utilizes a Makefile for automating the compilation process. To compile the project, simply run make in your terminal. Ensure you have all necessary dependencies installed beforehand.
 
-## How to use
-
 To compile use the following command:
-
-make
-
-Clean generated files:
-
-make clean
 
 ## Usage
 
