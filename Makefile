@@ -15,11 +15,13 @@ all: $(TARGET)
 # Crear binario
 $(TARGET): $(OBJS)
 	@mkdir -p $(BIN_DIR)
+	@echo "Linking target: $@"
 	$(CC) $(CFLAGS) $^ -o $@
 
 # Regla para compilar archivos .c en archivos .o
 $(OBJ_DIR)/%.o: %.c
 	@mkdir -p $(dir $@)
+	@echo "Compiling: $<"
 	$(CC) $(CFLAGS) -MMD -c $< -o $@
 
 # Incluir dependencias
@@ -27,6 +29,7 @@ $(OBJ_DIR)/%.o: %.c
 
 # Limpiar archivos compilados
 clean:
+	@echo "Cleaning up..."
 	rm -rf $(OBJ_DIR) $(BIN_DIR)
 
 # Phony targets
