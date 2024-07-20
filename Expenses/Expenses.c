@@ -18,7 +18,7 @@ void StartExpenses() {
     }
 }
 
-void showReportsOfExpenses() {
+void ShowReportsOfExpenses() {
     printf("Monthly Expenses Report:\n");
     for (int i = 0; i < NUMBER_OF_CARDS; i++) {
         double MonthTotal = 0;

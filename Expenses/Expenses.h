@@ -3,6 +3,6 @@
 #define Expenses_H
 
 void StartExpenses(void);
-void showReportsOfExpenses(void);
+void ShowReportsOfExpenses(void);
 
 #endif // Expenses_H

@@ -40,11 +40,10 @@ int main() {
     printf("\n**** Banking System ****\n");
     printf("1. Status of the Account\n");
     printf("2. Deposit\n");
-    printf("3. Withdrawal\n");
-    printf("4. Transfer\n");
-    printf("5. Returns\n");
-    printf("6. Expenses\n");
-    printf("7. Exit\n");
+    printf("3. Transfer\n");
+    printf("4. Returns\n");
+    printf("5. Expenses\n");
+    printf("6. Exit\n");
     printf("Enter an option: \n");
     if (scanf("%d", &option) != 1) {
       fprintf(stderr, "Invalid input. Please enter a number.\n");
@@ -127,7 +126,7 @@ int main() {
                 break;
     case 5:
       StartExpenses();
-      showReportsOfExpenses();
+      ShowReportsOfExpenses();
       break;
 
     case 6:
